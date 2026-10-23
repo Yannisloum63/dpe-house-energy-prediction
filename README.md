@@ -2,7 +2,6 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Yannisloum63/dpe-house-energy-prediction/blob/main/notebook.ipynb)
 
-Project for the course *Analyse de données et apprentissage automatique* (AAA, 2026).
 
 We predict the energy performance of French houses from their physical characteristics only
 (surface, construction period, insulation, heating system, climate zone...), using the official
@@ -59,8 +58,3 @@ scripts/extract_dpe.py      reproducible extraction of the sample from the ADEME
 data/                       versioned data used by the notebooks
 requirements.txt            extra Python libraries (Colab already has most of them)
 ```
-
-## Authors
-
-- Yannis [last name]
-- [teammate's name]
