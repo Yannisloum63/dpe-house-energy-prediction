@@ -1,0 +1,8 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.venv/
+# raw full exports are too large for GitHub, only the sample is versioned
+data/raw/
