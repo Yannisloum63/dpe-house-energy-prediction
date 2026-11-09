@@ -40,12 +40,6 @@ import pandas as pd
 URL = "https://raw.githubusercontent.com/Yannisloum63/dpe-house-energy-prediction/main/data/dpe_houses.csv.gz"
 df = pd.read_csv(URL)
 ```
-## Planning et suivi du projet
-
-Le planning prévisionnel et l’avancement du projet sont disponibles dans
-[notre tableau partagé](https://docs.google.com/spreadsheets/d/1p3WM9Ru5RT2jJuyxUvpzaOwex7UnbAlDauQU4YWrPl0/edit).
-
-Les étapes et les dates intermédiaires seront ajustées ensemble selon l’avancement.
 
 ### Data leakage
 
@@ -54,6 +48,13 @@ energy consumption and one from greenhouse gas emissions. Every column computed 
 3CL method (consumptions, emissions, costs, needs, heat losses) is therefore excluded from the
 model inputs. `emission_ges_5_usages_par_m2` and `etiquette_ges` are kept in the file only to
 illustrate this rule in the exploratory analysis.
+
+## Planning et suivi du projet
+
+Le planning prévisionnel et l’avancement du projet sont disponibles dans
+[notre tableau partagé](https://docs.google.com/spreadsheets/d/1p3WM9Ru5RT2jJuyxUvpzaOwex7UnbAlDauQU4YWrPl0/edit).
+
+Les étapes et les dates intermédiaires seront ajustées ensemble selon l’avancement.
 
 ## Repository structure
 
