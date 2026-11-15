@@ -15,7 +15,7 @@ import subprocess
 import pandas as pd
 import requests
 
-from extract_dpe import API_URL, COLUMNS, FEATURE_COLUMNS
+from extract_dpe import API_URL, PILOT_COLUMNS as COLUMNS, CANDIDATE_COLUMNS as FEATURE_COLUMNS
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data' / 'pilot'
