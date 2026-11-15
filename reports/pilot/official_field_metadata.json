@@ -1,0 +1,835 @@
+{
+  "numero_dpe": {
+    "key": "numero_dpe",
+    "x-originalName": "numero_dpe",
+    "type": "string",
+    "description": "",
+    "x-group": "Administratif",
+    "x-cardinality": 15957008,
+    "label": "numero_dpe",
+    "title": "",
+    "x-capabilities": {},
+    "x-refersTo": "Numero_DPE",
+    "x-concept": {
+      "id": "Numero_DPE",
+      "title": "Numéro de DPE",
+      "primary": true
+    }
+  },
+  "numero_dpe_remplace": {
+    "key": "numero_dpe_remplace",
+    "x-originalName": "numero_dpe_remplace",
+    "type": "string",
+    "title": "",
+    "icon": "mdi-text-short",
+    "x-capabilities": {},
+    "maxLength": 200,
+    "description": "",
+    "x-group": "Administratif",
+    "x-cardinality": 1444893,
+    "label": "numero_dpe_remplace"
+  },
+  "date_etablissement_dpe": {
+    "key": "date_etablissement_dpe",
+    "x-originalName": "date_etablissement_dpe",
+    "type": "string",
+    "format": "date",
+    "dateFormat": "D/M/YYYY",
+    "description": "",
+    "x-group": "Administratif",
+    "x-cardinality": 1960,
+    "label": "date_etablissement_dpe",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "code_insee_ban": {
+    "key": "code_insee_ban",
+    "x-originalName": "code_insee_ban",
+    "type": "string",
+    "description": "",
+    "x-refersTo": "http://rdf.insee.fr/def/geo#codeCommune",
+    "x-concept": {
+      "id": "codeCommune",
+      "title": "Code commune",
+      "primary": true
+    },
+    "x-group": "Localisation",
+    "x-cardinality": 35398,
+    "label": "code_insee_ban",
+    "title": "",
+    "x-capabilities": {
+      "text": false,
+      "insensitive": false,
+      "wildcard": true
+    }
+  },
+  "code_departement_ban": {
+    "key": "code_departement_ban",
+    "x-originalName": "code_departement_ban",
+    "type": "string",
+    "description": "",
+    "x-refersTo": "http://rdf.insee.fr/def/geo#codeDepartement",
+    "x-concept": {
+      "id": "codeDepartement",
+      "title": "Code département",
+      "primary": true
+    },
+    "x-group": "Localisation",
+    "x-cardinality": 104,
+    "label": "code_departement_ban",
+    "title": "",
+    "x-capabilities": {
+      "text": false,
+      "insensitive": false
+    }
+  },
+  "code_region_ban": {
+    "key": "code_region_ban",
+    "x-originalName": "code_region_ban",
+    "type": "string",
+    "description": "",
+    "x-refersTo": "http://rdf.insee.fr/def/geo#codeRegion",
+    "x-concept": {
+      "id": "codeRegion",
+      "title": "Code région",
+      "primary": true
+    },
+    "x-group": "Localisation",
+    "x-cardinality": 19,
+    "label": "code_region_ban",
+    "title": "",
+    "x-capabilities": {
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "11",
+      "84",
+      "75",
+      "76",
+      "32",
+      "44",
+      "93",
+      "52",
+      "28",
+      "53",
+      "24",
+      "27",
+      "94",
+      "02",
+      "04",
+      "01",
+      "03",
+      "06",
+      "00"
+    ]
+  },
+  "coordonnee_cartographique_x_ban": {
+    "key": "coordonnee_cartographique_x_ban",
+    "x-originalName": "coordonnee_cartographique_x_ban",
+    "type": "number",
+    "description": "",
+    "x-refersTo": "http://data.ign.fr/def/geometrie#coordX",
+    "x-concept": {
+      "id": "coordX",
+      "title": "Coordonnée X",
+      "primary": true
+    },
+    "x-group": "Localisation",
+    "x-cardinality": 5219137,
+    "label": "coordonnee_cartographique_x_ban",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "coordonnee_cartographique_y_ban": {
+    "key": "coordonnee_cartographique_y_ban",
+    "x-originalName": "coordonnee_cartographique_y_ban",
+    "type": "number",
+    "description": "",
+    "x-refersTo": "http://data.ign.fr/def/geometrie#coordY",
+    "x-concept": {
+      "id": "coordY",
+      "title": "Coordonnée Y (projection libre)",
+      "primary": true
+    },
+    "x-group": "Localisation",
+    "x-cardinality": 5229211,
+    "label": "coordonnee_cartographique_y_ban",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "surface_habitable_logement": {
+    "key": "surface_habitable_logement",
+    "x-originalName": "surface_habitable_logement",
+    "type": "number",
+    "description": "",
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 8104,
+    "label": "surface_habitable_logement",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "annee_construction": {
+    "key": "annee_construction",
+    "x-originalName": "annee_construction",
+    "type": "integer",
+    "title": "",
+    "icon": "mdi-numeric",
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 595,
+    "description": "",
+    "label": "annee_construction",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "periode_construction": {
+    "key": "periode_construction",
+    "x-originalName": "periode_construction",
+    "type": "string",
+    "title": "",
+    "icon": "mdi-text-short",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "maxLength": 200,
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 10,
+    "description": "",
+    "label": "periode_construction",
+    "enum": [
+      "1948-1974",
+      "avant 1948",
+      "1989-2000",
+      "2006-2012",
+      "2013-2021",
+      "1978-1982",
+      "1983-1988",
+      "1975-1977",
+      "2001-2005",
+      "après 2021"
+    ]
+  },
+  "hauteur_sous_plafond": {
+    "key": "hauteur_sous_plafond",
+    "x-originalName": "hauteur_sous_plafond",
+    "type": "number",
+    "description": "",
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 629,
+    "label": "hauteur_sous_plafond",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "nombre_niveau_logement": {
+    "key": "nombre_niveau_logement",
+    "x-originalName": "nombre_niveau_logement",
+    "type": "integer",
+    "description": "",
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 218,
+    "label": "nombre_niveau_logement",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "zone_climatique": {
+    "key": "zone_climatique",
+    "x-originalName": "zone_climatique",
+    "type": "string",
+    "description": "",
+    "title": "",
+    "x-group": "Localisation",
+    "x-cardinality": 9,
+    "label": "zone_climatique",
+    "x-capabilities": {
+      "insensitive": false,
+      "textStandard": false,
+      "text": false
+    },
+    "enum": [
+      "H1a",
+      "H1c",
+      "H3",
+      "H1b",
+      "H2b",
+      "H2c",
+      "H2a",
+      "H2d",
+      "Non affecté"
+    ]
+  },
+  "classe_altitude": {
+    "key": "classe_altitude",
+    "x-originalName": "classe_altitude",
+    "type": "string",
+    "description": "",
+    "x-group": "Localisation",
+    "x-cardinality": 4,
+    "label": "classe_altitude",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "inférieur à 400m",
+      "400-800m",
+      "supérieur à 800m",
+      "Non affecté"
+    ]
+  },
+  "classe_inertie_batiment": {
+    "key": "classe_inertie_batiment",
+    "x-originalName": "classe_inertie_batiment",
+    "type": "string",
+    "description": "",
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 4,
+    "label": "classe_inertie_batiment",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "Moyenne",
+      "Lourde",
+      "Légère",
+      "Très lourde"
+    ]
+  },
+  "qualite_isolation_enveloppe": {
+    "key": "qualite_isolation_enveloppe",
+    "x-originalName": "qualite_isolation_enveloppe",
+    "type": "string",
+    "description": "",
+    "x-group": "Isolation",
+    "x-cardinality": 4,
+    "label": "qualite_isolation_enveloppe",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "insuffisante",
+      "bonne",
+      "moyenne",
+      "très bonne"
+    ]
+  },
+  "qualite_isolation_murs": {
+    "key": "qualite_isolation_murs",
+    "x-originalName": "qualite_isolation_murs",
+    "type": "string",
+    "description": "",
+    "x-group": "Isolation",
+    "x-cardinality": 4,
+    "label": "qualite_isolation_murs",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "insuffisante",
+      "bonne",
+      "très bonne",
+      "moyenne"
+    ]
+  },
+  "qualite_isolation_plancher_bas": {
+    "key": "qualite_isolation_plancher_bas",
+    "x-originalName": "qualite_isolation_plancher bas",
+    "type": "string",
+    "description": "",
+    "x-group": "Isolation",
+    "x-cardinality": 4,
+    "label": "qualite_isolation_plancher bas",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "insuffisante",
+      "très bonne",
+      "bonne",
+      "moyenne"
+    ]
+  },
+  "qualite_isolation_menuiseries": {
+    "key": "qualite_isolation_menuiseries",
+    "x-originalName": "qualite_isolation_menuiseries",
+    "type": "string",
+    "description": "",
+    "x-group": "Isolation",
+    "x-cardinality": 4,
+    "label": "qualite_isolation_menuiseries",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "moyenne",
+      "bonne",
+      "très bonne",
+      "insuffisante"
+    ]
+  },
+  "qualite_isolation_plancher_haut_comble_perdu": {
+    "key": "qualite_isolation_plancher_haut_comble_perdu",
+    "x-originalName": "qualite_isolation_plancher_haut_comble_perdu",
+    "type": "string",
+    "title": "",
+    "icon": "mdi-text-short",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "maxLength": 200,
+    "x-group": "Isolation",
+    "x-cardinality": 4,
+    "description": "",
+    "label": "qualite_isolation_plancher_haut_comble_perdu",
+    "enum": [
+      "très bonne",
+      "insuffisante",
+      "moyenne",
+      "bonne"
+    ]
+  },
+  "qualite_isolation_plancher_haut_comble_amenage": {
+    "key": "qualite_isolation_plancher_haut_comble_amenage",
+    "x-originalName": "qualite_isolation_plancher_haut_comble_amenage",
+    "type": "string",
+    "description": "",
+    "x-group": "Isolation",
+    "x-cardinality": 4,
+    "label": "qualite_isolation_plancher_haut_comble_amenage",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    }
+  },
+  "qualite_isolation_plancher_haut_toit_terrasse": {
+    "key": "qualite_isolation_plancher_haut_toit_terrasse",
+    "x-originalName": "qualite_isolation_plancher_haut_toit_terrasse",
+    "type": "string",
+    "title": "",
+    "icon": "mdi-text-short",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "maxLength": 200,
+    "x-group": "Isolation",
+    "x-cardinality": 4,
+    "description": "",
+    "label": "qualite_isolation_plancher_haut_toit_terrasse",
+    "enum": [
+      "insuffisante",
+      "très bonne",
+      "bonne",
+      "moyenne"
+    ]
+  },
+  "isolation_toiture": {
+    "key": "isolation_toiture",
+    "x-originalName": "isolation_toiture",
+    "type": "integer",
+    "title": "",
+    "icon": "mdi-numeric",
+    "description": "",
+    "x-group": "Confort d'été",
+    "x-cardinality": 2,
+    "label": "isolation_toiture",
+    "x-capabilities": {
+      "textStandard": false
+    },
+    "enum": [
+      1,
+      0
+    ]
+  },
+  "type_energie_principale_chauffage": {
+    "key": "type_energie_principale_chauffage",
+    "x-originalName": "type_energie_principale_chauffage",
+    "type": "string",
+    "description": "",
+    "x-group": "Chauffage",
+    "x-cardinality": 15,
+    "label": "type_energie_principale_chauffage",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "Électricité",
+      "Gaz naturel",
+      "Réseau de Chauffage urbain",
+      "Fioul domestique",
+      "Bois – Bûches",
+      "Bois – Granulés (pellets) ou briquettes",
+      "GPL",
+      "Propane",
+      "Bois – Plaquettes forestières",
+      "Charbon",
+      "Bois – Plaquettes d’industrie",
+      "Électricité d'origine renouvelable utilisée dans le bâtiment",
+      "Butane",
+      "Non affecté",
+      "Réseau de Froid Urbain"
+    ]
+  },
+  "type_installation_chauffage": {
+    "key": "type_installation_chauffage",
+    "x-originalName": "type_installation_chauffage",
+    "type": "string",
+    "description": "",
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 3,
+    "label": "type_installation_chauffage",
+    "title": "",
+    "x-capabilities": {
+      "insensitive": false,
+      "textStandard": false,
+      "text": false
+    },
+    "enum": [
+      "individuel",
+      "collectif",
+      "mixte (collectif-individuel)"
+    ]
+  },
+  "type_generateur_chauffage_principal": {
+    "key": "type_generateur_chauffage_principal",
+    "x-originalName": "type_generateur_chauffage_principal",
+    "type": "string",
+    "description": "",
+    "x-group": "Chauffage",
+    "x-cardinality": 157,
+    "label": "type_generateur_chauffage_principal",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    }
+  },
+  "type_emetteur_installation_chauffage_n1": {
+    "key": "type_emetteur_installation_chauffage_n1",
+    "x-originalName": "type_emetteur_installation_chauffage_n1",
+    "type": "string",
+    "description": "",
+    "x-group": "Chauffage",
+    "x-cardinality": 50,
+    "label": "type_emetteur_installation_chauffage_n1",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "Radiateur bitube avec robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)",
+      "radiateur électrique NFC, NF** et NF***",
+      "Convecteur électrique NFC, NF** et NF***",
+      "Panneau rayonnant NFC, NF** et NF***",
+      "Radiateur bitube avec robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)",
+      "Radiateur bitube avec robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)",
+      "Radiateur bitube avec robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)",
+      "Radiateur bitube sans robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)",
+      "Poêle bois",
+      "Radiateur bitube sans robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)",
+      "Radiateur bitube sans robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)",
+      "Radiateur électrique à accumulation",
+      "Radiateur bitube sans robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)",
+      "Plancher chauffant sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)",
+      "Plancher chauffant sur réseau collectif eau chaude haute température(sup ou egal 65°C)",
+      "Soufflage d'air chaud (air soufflé) avec distribution par réseau aéraulique",
+      "Radiateur monotube avec robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)",
+      "Radiateur monotube sans robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)",
+      "Soufflage d'air chaud (air soufflé) avec distribution par fluide frigorigène",
+      "Autres émetteurs à effet joule",
+      "Plancher chauffant sur réseau individuel eau chaude haute température(sup ou egal 65°C)",
+      "Radiateur monotube sans robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)",
+      "Radiateur monotube avec robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)",
+      "Plancher chauffant sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)",
+      "Radiateur monotube avec robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)",
+      "Plancher rayonnant électrique avec régulation terminale",
+      "Radiateur monotube sans robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)",
+      "Radiateur monotube avec robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)",
+      "Radiateur monotube sans robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)",
+      "Soufflage d'air chaud sans réseau de distribution (ventiloconvecteur éléctrique)",
+      "Plancher rayonnant électrique sans régulation",
+      "Radiateur gaz à ventouse ou sur conduit de fumée",
+      "Autres équipements",
+      "Plafond rayonnant électrique avec régulation terminale",
+      "Convecteur bi-jonction",
+      "Poêle fioul",
+      "Poêle charbon",
+      "Plafond chauffant sur réseau collectif eau chaude haute température(sup ou egal 65°C)",
+      "Plafond chauffant sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)",
+      "Plafond rayonnant électrique sans régulation",
+      "Radiateur avec distribution par fluide frigorigène (à détente directe)",
+      "Plafond chauffant sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)",
+      "Soufflage d'air chaud (Ventiloconvecteur) sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)",
+      "Plancher chauffant avec distribution par fluide frigorigène (plancher chauffant à détente directe)",
+      "Soufflage d'air chaud (Ventiloconvecteur) sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)",
+      "Plafond chauffant sur réseau individuel eau chaude haute température(sup ou egal 65°C)",
+      "Poêle GPL",
+      "Soufflage d'air chaud (Ventiloconvecteur) sur réseau collectif eau chaude haute température(sup ou egal 65°C)",
+      "Soufflage d'air chaud (Ventiloconvecteur) sur réseau individuel eau chaude haute température(sup ou egal 65°C)",
+      "Plafond chauffant avec distribution par fluide frigorigène (Plafond chauffant à détente directe)"
+    ]
+  },
+  "type_energie_principale_ecs": {
+    "key": "type_energie_principale_ecs",
+    "x-originalName": "type_energie_principale_ecs",
+    "type": "string",
+    "description": "",
+    "x-group": "ECS",
+    "x-cardinality": 15,
+    "label": "type_energie_principale_ecs",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "Électricité",
+      "Gaz naturel",
+      "Réseau de Chauffage urbain",
+      "Non affecté",
+      "Fioul domestique",
+      "GPL",
+      "Bois – Granulés (pellets) ou briquettes",
+      "Propane",
+      "Bois – Bûches",
+      "Bois – Plaquettes forestières",
+      "Butane",
+      "Bois – Plaquettes d’industrie",
+      "Électricité d'origine renouvelable utilisée dans le bâtiment",
+      "Charbon",
+      "Réseau de Froid Urbain"
+    ]
+  },
+  "type_ventilation": {
+    "key": "type_ventilation",
+    "x-originalName": "type_ventilation",
+    "type": "string",
+    "title": "",
+    "icon": "mdi-text-short",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "maxLength": 200,
+    "description": "",
+    "x-group": "Ventilation",
+    "x-cardinality": 39,
+    "label": "type_ventilation",
+    "enum": [
+      "Ventilation par ouverture des fenêtres",
+      "VMC SF Hygro B après 2012",
+      "VMC SF Auto réglable de 1982 à 2000",
+      "VMC SF Auto réglable après 2012",
+      "VMC SF Auto réglable de 2001 à 2012",
+      "Ventilation naturelle par conduit",
+      "VMC SF Auto réglable avant 1982",
+      "Ventilation par entrées d'air hautes et basses",
+      "VMC SF Hygro A après 2012",
+      "VMC SF Hygro B de 2001 à 2012",
+      "VMC SF Hygro A de 2001 à 2012",
+      "VMC SF Hygro A avant 2001",
+      "Ventilation mécanique sur conduit existant avant 2013",
+      "VMC SF Hygro B avant  2001",
+      "Ventilation naturelle par conduit avec entrées d'air hygro",
+      "Ventilation mécanique sur conduit existant à partir de 2013",
+      "VMC Basse pression Hygro B",
+      "VMC Basse pression Hygro A",
+      "VMC SF Gaz avant  2001",
+      "VMC SF Gaz de 2001 à 2012",
+      "VMC SF Gaz après 2012",
+      "VMC Basse pression Auto-réglable",
+      "VMC DF individuelle avec échangeur à partir de 2013",
+      "Ventilation hybride après 2012",
+      "Ventilation hybride de 2001 à 2012",
+      "VMC DF individuelle avec échangeur avant 2013",
+      "Ventilation hybride avant  2001",
+      "Ventilation hybride avec entrées d'air hygro après 2012",
+      "VMC DF collective avec échangeur avant 2013",
+      "VMC DF collective avec échangeur à partir de 2013",
+      "VMC DF sans échangeur avant 2013",
+      "VMC DF sans échangeur après 2012",
+      "Ventilation hybride avec entrées d'air hygro de 2001 à 2012",
+      "Ventilation hybride avec entrées d'air hygro avant  2001",
+      "Non affecté",
+      "Puits climatique avec échangeur avant 2013",
+      "Puits climatique sans échangeur avant 2013",
+      "Puits climatique avec échangeur à partir de 2013",
+      "Puits climatique sans échangeur à partir de 2013"
+    ]
+  },
+  "presence_production_pv": {
+    "key": "presence_production_pv",
+    "x-originalName": "presence_production_pv",
+    "type": "integer",
+    "title": "",
+    "icon": "mdi-numeric",
+    "description": "",
+    "x-group": "Energie Renouvelable",
+    "x-cardinality": 2,
+    "label": "presence_production_pv",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "surface_totale_capteurs_pv": {
+    "key": "surface_totale_capteurs_pv",
+    "x-originalName": "surface_totale_capteurs_pv",
+    "type": "number",
+    "title": "",
+    "icon": "mdi-numeric",
+    "description": "",
+    "x-group": "Energie Renouvelable",
+    "x-cardinality": 993,
+    "label": "surface_totale_capteurs_pv",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "conso_5_usages_par_m2_ep": {
+    "key": "conso_5_usages_par_m2_ep",
+    "x-originalName": "conso_5_usages_par_m2_ep",
+    "type": "number",
+    "description": "",
+    "title": "",
+    "x-group": "Consommation en énergie primaire",
+    "x-cardinality": 12072,
+    "label": "conso_5_usages_par_m2_ep",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "etiquette_dpe": {
+    "key": "etiquette_dpe",
+    "x-originalName": "etiquette_dpe",
+    "type": "string",
+    "description": "",
+    "x-group": "Bilan DPE",
+    "x-cardinality": 7,
+    "label": "etiquette_dpe",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "C",
+      "D",
+      "E",
+      "F",
+      "B",
+      "G",
+      "A"
+    ]
+  },
+  "emission_ges_5_usages_par_m2": {
+    "key": "emission_ges_5_usages_par_m2",
+    "x-originalName": "emission_ges_5_usages par_m2",
+    "type": "number",
+    "description": "",
+    "x-group": "Emissions de GES",
+    "x-cardinality": 3027,
+    "label": "emission_ges_5_usages par_m2",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false
+    }
+  },
+  "etiquette_ges": {
+    "key": "etiquette_ges",
+    "x-originalName": "etiquette_ges",
+    "type": "string",
+    "description": "",
+    "x-group": "Bilan DPE",
+    "x-cardinality": 7,
+    "label": "etiquette_ges",
+    "title": "",
+    "x-capabilities": {
+      "textStandard": false,
+      "text": false,
+      "insensitive": false
+    },
+    "enum": [
+      "C",
+      "B",
+      "D",
+      "A",
+      "E",
+      "F",
+      "G"
+    ]
+  },
+  "type_batiment": {
+    "key": "type_batiment",
+    "x-originalName": "type_batiment",
+    "type": "string",
+    "description": "",
+    "x-group": "Caractéristiques bâtiment",
+    "x-cardinality": 3,
+    "label": "type_batiment",
+    "title": "",
+    "x-capabilities": {
+      "insensitive": false,
+      "textStandard": false,
+      "text": false
+    },
+    "enum": [
+      "appartement",
+      "maison",
+      "immeuble"
+    ]
+  },
+  "id_rnb": {
+    "key": "id_rnb",
+    "title": "",
+    "type": "string",
+    "x-capabilities": {},
+    "description": "",
+    "x-cardinality": 2874935,
+    "x-group": "Administratif"
+  }
+}

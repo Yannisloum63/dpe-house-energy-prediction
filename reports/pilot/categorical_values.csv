@@ -1,0 +1,119 @@
+﻿field,value,count
+periode_construction,avant 1948,352
+periode_construction,1948-1974,185
+periode_construction,1989-2000,100
+periode_construction,2006-2012,75
+periode_construction,1983-1988,67
+periode_construction,1978-1982,67
+periode_construction,2013-2021,54
+periode_construction,2001-2005,49
+periode_construction,1975-1977,28
+periode_construction,après 2021,23
+zone_climatique,H1c,828
+zone_climatique,H2d,168
+zone_climatique,<MANQUANT>,3
+zone_climatique,H3,1
+classe_altitude,inférieur à 400m,630
+classe_altitude,400-800m,283
+classe_altitude,supérieur à 800m,84
+classe_altitude,<MANQUANT>,3
+classe_inertie_batiment,Légère,377
+classe_inertie_batiment,Moyenne,374
+classe_inertie_batiment,Lourde,222
+classe_inertie_batiment,Très lourde,22
+classe_inertie_batiment,<MANQUANT>,5
+qualite_isolation_enveloppe,insuffisante,388
+qualite_isolation_enveloppe,bonne,260
+qualite_isolation_enveloppe,moyenne,179
+qualite_isolation_enveloppe,très bonne,173
+qualite_isolation_murs,insuffisante,457
+qualite_isolation_murs,bonne,262
+qualite_isolation_murs,très bonne,142
+qualite_isolation_murs,moyenne,139
+qualite_isolation_plancher_bas,insuffisante,507
+qualite_isolation_plancher_bas,bonne,192
+qualite_isolation_plancher_bas,moyenne,164
+qualite_isolation_plancher_bas,très bonne,133
+qualite_isolation_plancher_bas,<MANQUANT>,4
+qualite_isolation_menuiseries,moyenne,378
+qualite_isolation_menuiseries,bonne,281
+qualite_isolation_menuiseries,très bonne,218
+qualite_isolation_menuiseries,insuffisante,123
+qualite_isolation_plancher_haut_comble_perdu,<MANQUANT>,416
+qualite_isolation_plancher_haut_comble_perdu,très bonne,238
+qualite_isolation_plancher_haut_comble_perdu,insuffisante,166
+qualite_isolation_plancher_haut_comble_perdu,bonne,95
+qualite_isolation_plancher_haut_comble_perdu,moyenne,85
+qualite_isolation_plancher_haut_comble_amenage,<MANQUANT>,689
+qualite_isolation_plancher_haut_comble_amenage,bonne,98
+qualite_isolation_plancher_haut_comble_amenage,insuffisante,90
+qualite_isolation_plancher_haut_comble_amenage,très bonne,81
+qualite_isolation_plancher_haut_comble_amenage,moyenne,42
+qualite_isolation_plancher_haut_toit_terrasse,<MANQUANT>,867
+qualite_isolation_plancher_haut_toit_terrasse,très bonne,60
+qualite_isolation_plancher_haut_toit_terrasse,insuffisante,45
+qualite_isolation_plancher_haut_toit_terrasse,bonne,16
+qualite_isolation_plancher_haut_toit_terrasse,moyenne,12
+type_energie_principale_chauffage,Électricité,520
+type_energie_principale_chauffage,Gaz naturel,216
+type_energie_principale_chauffage,Fioul domestique,123
+type_energie_principale_chauffage,Bois – Bûches,86
+type_energie_principale_chauffage,Bois – Granulés (pellets) ou briquettes,39
+type_energie_principale_chauffage,GPL,12
+type_energie_principale_chauffage,Propane,2
+type_energie_principale_chauffage,Bois – Plaquettes d’industrie,1
+type_energie_principale_chauffage,Réseau de Chauffage urbain,1
+type_generateur_chauffage_principal,<MANQUANT>,258
+type_generateur_chauffage_principal,"radiateur électrique NFC, NF** et NF***",83
+type_generateur_chauffage_principal,PAC air/eau installée après 2017,66
+type_generateur_chauffage_principal,Chaudière gaz à condensation après 2015,65
+type_generateur_chauffage_principal,PAC air/air installée à partir de 2015,63
+type_generateur_chauffage_principal,Chaudière gaz à condensation 2001-2015,47
+type_generateur_chauffage_principal,Chaudière fioul standard 1991-2015,44
+type_generateur_chauffage_principal,"Convecteur électrique NFC, NF** et NF***",41
+type_generateur_chauffage_principal,"Panneau rayonnant électrique NFC, NF** et NF***",32
+type_generateur_chauffage_principal,Radiateur électrique à accumulation,21
+type_generateur_chauffage_principal,Plancher ou plafond rayonnant électrique avec régulation terminale,20
+type_generateur_chauffage_principal,Chaudière gaz standard 2001-2015,19
+type_generateur_chauffage_principal,Chaudière gaz basse température 2001-2015,19
+type_generateur_chauffage_principal,Autres émetteurs à effet joule,18
+type_generateur_chauffage_principal,PAC air/air installée entre 2008 et 2014,11
+type_emetteur_installation_chauffage_n1,Poêle bois,196
+type_emetteur_installation_chauffage_n1,Radiateur bitube avec robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C),132
+type_emetteur_installation_chauffage_n1,"radiateur électrique NFC, NF** et NF***",123
+type_emetteur_installation_chauffage_n1,Radiateur bitube avec robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C),103
+type_emetteur_installation_chauffage_n1,Plancher chauffant sur réseau individuel eau chaude basse ou moyenne température(inf 65°C),62
+type_emetteur_installation_chauffage_n1,"Convecteur électrique NFC, NF** et NF***",54
+type_emetteur_installation_chauffage_n1,"Panneau rayonnant NFC, NF** et NF***",43
+type_emetteur_installation_chauffage_n1,Radiateur bitube sans robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C),42
+type_emetteur_installation_chauffage_n1,Soufflage d'air chaud (air soufflé) avec distribution par réseau aéraulique,34
+type_emetteur_installation_chauffage_n1,Radiateur monotube avec robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C),29
+type_emetteur_installation_chauffage_n1,Plancher rayonnant électrique avec régulation terminale,28
+type_emetteur_installation_chauffage_n1,Radiateur électrique à accumulation,22
+type_emetteur_installation_chauffage_n1,Autres émetteurs à effet joule,22
+type_emetteur_installation_chauffage_n1,Plancher chauffant sur réseau individuel eau chaude haute température(sup ou egal 65°C),20
+type_emetteur_installation_chauffage_n1,Radiateur bitube sans robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C),20
+type_energie_principale_ecs,Électricité,674
+type_energie_principale_ecs,Gaz naturel,207
+type_energie_principale_ecs,Fioul domestique,77
+type_energie_principale_ecs,Non affecté,16
+type_energie_principale_ecs,GPL,13
+type_energie_principale_ecs,Bois – Granulés (pellets) ou briquettes,8
+type_energie_principale_ecs,Bois – Bûches,3
+type_energie_principale_ecs,Propane,1
+type_energie_principale_ecs,Réseau de Chauffage urbain,1
+type_ventilation,<MANQUANT>,809
+type_ventilation,VMC SF Auto réglable de 2001 à 2012,30
+type_ventilation,Ventilation par ouverture des fenêtres,26
+type_ventilation,VMC SF Auto réglable après 2012,26
+type_ventilation,VMC SF Auto réglable de 1982 à 2000,24
+type_ventilation,VMC SF Auto réglable avant 1982,19
+type_ventilation,VMC SF Hygro B après 2012,17
+type_ventilation,VMC SF Hygro A après 2012,11
+type_ventilation,Ventilation par entrées d'air hautes et basses,8
+type_ventilation,VMC SF Hygro B de 2001 à 2012,6
+type_ventilation,Ventilation naturelle par conduit,6
+type_ventilation,VMC SF Hygro B avant  2001,4
+type_ventilation,VMC DF individuelle avec échangeur à partir de 2013,3
+type_ventilation,VMC SF Hygro A avant 2001,3
+type_ventilation,Ventilation mécanique sur conduit existant avant 2013,2
