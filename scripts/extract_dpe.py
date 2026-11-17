@@ -127,9 +127,14 @@ def fetch_all(query: str, max_rows: int = 0) -> pd.DataFrame:
                     print(f"  Nouvelle tentative : {error}", file=sys.stderr)
                     time.sleep(2 ** (attempt + 1))
             page = response.json()
-            if total is not None and page["total"] != total:
-                raise ValueError("Le volume source a changé pendant l'extraction. Relancer.")
-            total = page["total"]
+            # Les pages suivantes peuvent omettre total : garder celui de départ.
+            page_total = page.get("total")
+            if total is None or "total" in page:
+                if type(page_total) is not int or page_total < 0:
+                    raise ValueError("Nombre total absent ou invalide dans la réponse ADEME.")
+                if total is not None and page_total != total:
+                    raise ValueError("Le volume source a changé pendant l'extraction. Relancer.")
+                total = page_total
             if max_rows and len(page["results"]) > max_rows - len(rows):
                 raise ValueError("L'API a dépassé la limite demandée.")
             rows.extend(page["results"])
