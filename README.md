@@ -1,7 +1,10 @@
 # Predicting the Energy Performance of French Houses
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Yannisloum63/dpe-house-energy-prediction/blob/main/notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xNeqSggpeeaq414OgVXmAWM-mgFp0aQ0?usp=sharing)
 
+**Notebook partagé de l'équipe :** [ouvrir le Colab commun](https://colab.research.google.com/drive/1xNeqSggpeeaq414OgVXmAWM-mgFp0aQ0?usp=sharing).
+La copie [notebook.ipynb](notebook.ipynb) conservée dans ce dépôt doit être mise à jour séparément ;
+les modifications du Colab ne sont pas synchronisées automatiquement avec GitHub.
 
 We predict the energy performance of French houses from their physical characteristics only
 (surface, construction period, insulation, heating system, climate zone...), using the official
