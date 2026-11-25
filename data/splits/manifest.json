@@ -1,9 +1,9 @@
 {
   "policy": {
-    "version": "preparation_v1",
+    "version": "preparation_v2",
     "height_max_m": 10,
-    "levels_max": 10,
-    "reason": "Seuils prudents de projet pour les maisons, pas des seuils réglementaires. Valeurs non positives, non finies ou au-delà des bornes mises à NaN. Les nombres de niveaux non entiers sont également masqués.",
+    "levels_max": 20,
+    "reason": "Bornes choisies sur le train : hauteur > 10 m, niveaux > 20. Valeurs suspectes mises à NaN, sans correction d'unité supposée. Ces bornes de projet ne sont pas des normes ADEME. Valeurs non positives, non finies et niveaux non entiers également masqués.",
     "unchanged": "Aucune ligne supprimée ; aucune correction supposée d'unité ; pas de plafond sur la surface ou les cibles ; pas d'imputation ni de normalisation."
   },
   "source_sha256": "2ad294f1e64669e1d92e8a6238b1bed6dbcd8acfc62616b72e0542b5795604de",
@@ -52,11 +52,11 @@
   ],
   "rows": 80000,
   "rows_removed": 0,
-  "masked_cells": 24,
-  "affected_rows": 24,
+  "masked_cells": 20,
+  "affected_rows": 20,
   "masked_by_field": {
     "hauteur_sous_plafond": 13,
-    "nombre_niveau_logement": 11
+    "nombre_niveau_logement": 7
   },
   "split_sizes": {
     "train": 47974,
@@ -96,14 +96,14 @@
     }
   },
   "assignments_sha256": "40fa6f625ff9351348211dfc89bcb49a32fa919b402fc095475e9f623cdf1b97",
-  "script_sha256": "fc5da6179798ab70688a40b1f38cdabea2509df017756916ed8a4ea198cc9628",
+  "script_sha256": "7913ebe910803f6bff6603f82a43fd51a0262c79f3bcae2309c91224df5ef4fc",
   "limits": [
     "Les RNB manquants ne permettent pas de garantir l'absence de tout bâtiment commun.",
     "Les références de remplacement sont aussi regroupées ; les liens inconnus restent invisibles.",
     "DPE de versions et années différentes conservés : les cibles ne sont pas harmonisées.",
     "L'exploration descriptive initiale portait sur les 80000 lignes avant la séparation.",
     "Le test est désormais réservé ; toute nouvelle analyse guidant le modèle utilise train.",
-    "Les seuils de masquage sont une convention de projet à discuter et tester sur train/validation.",
+    "Bornes de projet fixées sur le train ; effet sur les modèles à évaluer sur validation.",
     "Imputation, encodage, standardisation et sélection doivent être ajustés dans les plis d'entraînement.",
     "Réutiliser les groupes lors de la validation croisée ; ne jamais inclure group_id ou split dans X."
   ]

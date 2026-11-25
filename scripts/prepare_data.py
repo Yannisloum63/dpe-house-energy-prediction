@@ -1,4 +1,4 @@
-"""Préparation commune : masquage prudent et séparation fixe par bâtiment.
+"""Chargement des ensembles et remplacement des entrées suspectes par NaN.
 
 Génération unique : python scripts/prepare_data.py
 Les notebooks réutilisent data/splits/assignments.csv.gz, sans nouveau tirage.
@@ -18,12 +18,13 @@ TARGET_REG = "conso_5_usages_par_m2_ep"
 TARGET_CLF = "etiquette_dpe"
 NUMERIC_FEATURES = ["surface_habitable_logement", "hauteur_sous_plafond", "nombre_niveau_logement"]
 POLICY = {
-    "version": "preparation_v1",
+    "version": "preparation_v2",
     "height_max_m": 10,
-    "levels_max": 10,
-    "reason": "Seuils prudents de projet pour les maisons, pas des seuils réglementaires. "
-              "Valeurs non positives, non finies ou au-delà des bornes mises à NaN. "
-              "Les nombres de niveaux non entiers sont également masqués.",
+    "levels_max": 20,
+    "reason": "Bornes choisies sur le train : hauteur > 10 m, niveaux > 20. "
+              "Valeurs suspectes mises à NaN, sans correction d'unité supposée. "
+              "Ces bornes de projet ne sont pas des normes ADEME. "
+              "Valeurs non positives, non finies et niveaux non entiers également masqués.",
     "unchanged": "Aucune ligne supprimée ; aucune correction supposée d'unité ; "
                  "pas de plafond sur la surface ou les cibles ; pas d'imputation ni de normalisation.",
 }
@@ -128,8 +129,8 @@ def validate_assignments(data, assignments):
             raise ValueError(f"Classe manquante dans {name}.")
 
 
-def load_shared_data(base_url, apply_mask=False):
-    """Réutiliser la séparation ; le masquage provisoire exige un choix explicite."""
+def load_shared_data(base_url, apply_mask=True):
+    """Charger les ensembles préparés ; apply_mask=False conserve les valeurs brutes."""
     import requests
     def fetch(relative):
         response = requests.get(base_url.rstrip("/") + "/" + relative, timeout=120)
@@ -207,7 +208,7 @@ def main():
             "DPE de versions et années différentes conservés : les cibles ne sont pas harmonisées.",
             "L'exploration descriptive initiale portait sur les 80000 lignes avant la séparation.",
             "Le test est désormais réservé ; toute nouvelle analyse guidant le modèle utilise train.",
-            "Les seuils de masquage sont une convention de projet à discuter et tester sur train/validation.",
+            "Bornes de projet fixées sur le train ; effet sur les modèles à évaluer sur validation.",
             "Imputation, encodage, standardisation et sélection doivent être ajustés dans les plis d'entraînement.",
             "Réutiliser les groupes lors de la validation croisée ; ne jamais inclure group_id ou split dans X.",
         ],

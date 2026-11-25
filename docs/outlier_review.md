@@ -43,7 +43,20 @@ associés à une surface ordinaire suggèrent de vérifier les fiches et les uni
 plus grandes et les cinq plus petites valeurs par variable, avec les numéros DPE
 et les autres caractéristiques. Une fiche peut apparaître pour plusieurs variables.
 
-Les valeurs restent inchangées en attendant leur vérification.
-Les traitements éventuels sont à comparer sur train/validation, sans utiliser le test.
+## Traitement retenu
+
+Les 11 fiches du train avec une hauteur ou un nombre de niveaux supérieur à 10
+ont les mêmes valeurs dans l'[API ADEME](https://data.ademe.fr/datasets/dpe03existant).
+Cela exclut une erreur de téléchargement, mais ne donne pas la valeur correcte.
+
+Les hauteurs > 10 m et les niveaux > 20 sont remplacés par une valeur manquante.
+Ces bornes se situent dans les écarts observés sur le train : 9,6 à 25 m pour
+la hauteur, 15 à 30 pour les niveaux. Elles isolent 6 hauteurs et 3 nombres de
+niveaux très éloignés des valeurs courantes, sans corriger une unité supposée.
+Ce sont des choix de préparation, pas la confirmation que chaque valeur est fausse.
+
+Les niveaux 10, 11 et 15, les hauteurs basses et les grandes surfaces sont conservés.
+Les graphiques ci-dessus montrent toujours les valeurs brutes. L'effet de ce
+traitement sur les modèles reste à mesurer sur validation ; le test reste réservé.
 
 Pour générer les trois figures et les tableaux : `python scripts/inspect_outliers.py`.

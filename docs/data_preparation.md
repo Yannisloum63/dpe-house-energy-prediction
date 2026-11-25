@@ -43,16 +43,20 @@ les analyses guidant les modèles doivent utiliser train/validation.
 
 ## Valeurs suspectes et options de chargement
 
-`load_shared_data(..., apply_mask=False)` conserve les valeurs brutes et les
-valeurs manquantes. Le traitement des cas suspects reste à définir à partir
-des [graphiques et des fiches](outlier_review.md).
+`load_shared_data(..., apply_mask=True)`, utilisé dans le notebook, remplace
+par une valeur manquante :
 
-L'option expérimentale `apply_mask=True` remplace par une valeur manquante :
-
-- les hauteurs supérieures à 10 m et les nombres de niveaux supérieurs à 10 ;
+- les hauteurs supérieures à 10 m et les nombres de niveaux supérieurs à 20 ;
 - les surfaces, hauteurs et niveaux non positifs ou non finis ;
 - les niveaux non entiers et les indicateurs d'isolation hors {0, 1}.
 
-Le seuil de 10 reste à vérifier. Les 24 cellules de `data/splits/masked_values.csv`
-(13 hauteurs et 11 nombres de niveaux) décrivent cette option, désactivée par défaut.
+Ces bornes de projet isolent les écarts les plus marqués du train
+([graphiques et justification](outlier_review.md)) ; ce ne sont pas des normes ADEME.
+Elles s'appliquent à l'identique aux trois ensembles.
+`data/splits/masked_values.csv` liste les 20 cellules remplacées :
+13 hauteurs et 7 nombres de niveaux, sur 20 diagnostics. Le train en contient 9.
+Les niveaux 10, 11 et 15, les grandes surfaces et les hauteurs basses restent inchangés.
+
+Les valeurs manquantes seront remplies dans le Pipeline d'entraînement.
 Aucune ligne n'est supprimée et le fichier source reste intact.
+`apply_mask=False` permet de charger les valeurs brutes pour comparer les modèles.
