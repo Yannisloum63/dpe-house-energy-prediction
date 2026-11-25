@@ -2,9 +2,9 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xNeqSggpeeaq414OgVXmAWM-mgFp0aQ0?usp=sharing)
 
-**Notebook partagé de l'équipe :** [ouvrir le Colab commun](https://colab.research.google.com/drive/1xNeqSggpeeaq414OgVXmAWM-mgFp0aQ0?usp=sharing).
-La copie [notebook.ipynb](notebook.ipynb) conservée dans ce dépôt doit être mise à jour séparément ;
-les modifications du Colab ne sont pas synchronisées automatiquement avec GitHub.
+Nous travaillons dans [ce Colab partagé](https://colab.research.google.com/drive/1xNeqSggpeeaq414OgVXmAWM-mgFp0aQ0?usp=sharing).
+Nous gardons aussi une copie dans [notebook.ipynb](notebook.ipynb).
+Après une modification dans Colab, il faut exporter le notebook pour mettre à jour cette copie sur GitHub.
 
 We predict the energy performance of French houses from their physical characteristics only
 (surface, construction period, insulation, heating system, climate zone...), using the official
@@ -20,7 +20,7 @@ Energy Performance Diagnostics (DPE). The problem is treated in two ways:
 - **Source:** [DPE Logements existants (depuis juillet 2021)](https://data.ademe.fr/datasets/dpe03existant), ADEME,
   also published on [data.gouv.fr](https://www.data.gouv.fr/datasets/dpe-logements-existants-depuis-juillet-2021).
 - **Licence:** [Licence Ouverte / Open Licence 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/).
-  Data produced by ADEME, extracted and filtered by the authors (extraction date given below).
+  We extracted and filtered the ADEME data on the date shown below.
 - **Full dataset:** about 15.9 million DPEs and 230 columns, including 4.7 million houses.
 - **Our sample:** houses only, one area, replaced DPEs removed, sample stratified on the energy label.
   It is stored in `data/` so that the notebook loads it directly from GitHub.
@@ -29,14 +29,16 @@ Energy Performance Diagnostics (DPE). The problem is treated in two ways:
 | --- | --- | --- |
 | `data/dpe_houses.csv.gz` | 80,000 house diagnostics, region 84 | 2026-11-17 |
 
-### Préparation commune et séparation des données
+### Préparation et séparation des données
 
-Les règles de traitement des valeurs suspectes et l'utilisation des ensembles fixes
-sont décrites dans [la préparation commune](docs/data_preparation.md).
-L'[analyse visuelle du train brut](docs/outlier_review.md) précède le choix des règles ;
-le masquage provisoire au seuil de 10 est désactivé par défaut.
-Réutiliser `data/splits/assignments.csv.gz` : environ 60 % train, 20 % validation,
-20 % test, sans chevauchement des groupes de bâtiments connus. La source reste inchangée.
+Nous avons gardé le fichier d'origine et fixé le découpage dans `data/splits/assignments.csv.gz` :
+environ 60 % pour l'entraînement, 20 % pour la validation et 20 % pour le test.
+Les diagnostics que nous avons pu relier au même bâtiment restent dans le même ensemble.
+Le détail est dans [nos notes de préparation](docs/data_preparation.md).
+
+Nous avons aussi [examiné les valeurs extrêmes du train](docs/outlier_review.md).
+Le seuil de 10 proposé pour la hauteur et le nombre de niveaux reste à vérifier ;
+pour l'instant, le notebook conserve ces valeurs.
 
 To regenerate the sample:
 
@@ -63,10 +65,10 @@ illustrate this rule in the exploratory analysis.
 
 ## Planning et suivi du projet
 
-Le planning prévisionnel et l’avancement du projet sont disponibles dans
+Nous suivons l’avancement dans
 [notre tableau partagé](https://docs.google.com/spreadsheets/d/1p3WM9Ru5RT2jJuyxUvpzaOwex7UnbAlDauQU4YWrPl0/edit).
 
-Les étapes et les dates intermédiaires seront ajustées ensemble selon l’avancement.
+Nous ajusterons les dates intermédiaires selon ce qu’il nous reste à faire.
 
 ## Repository structure
 
