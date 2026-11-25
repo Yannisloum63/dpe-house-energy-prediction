@@ -3,8 +3,12 @@
 Cette étape fournit les mêmes données et les mêmes ensembles aux trois membres.
 Le fichier source de 80 000 diagnostics reste inchangé. Aucun modèle n'est entraîné ici.
 
-Résultat de la version 1 : 13 hauteurs et 11 nombres de niveaux masqués, soit
-24 cellules sur 24 diagnostics ; aucune ligne supprimée.
+**État actuel : le masquage au seuil de 10 est désactivé par défaut.**
+L'analyse visuelle sur le train brut doit précéder la décision de traitement :
+voir [l'examen des valeurs extrêmes](outlier_review.md).
+La version 1 avait proposé de masquer 13 hauteurs et 11 nombres de niveaux,
+soit 24 cellules sur 24 diagnostics. Ces nombres restent dans le manifeste
+historique ; ils ne décrivent pas le chargement actuel sans masquage.
 
 | Ensemble | Diagnostics |
 | --- | ---: |
@@ -18,8 +22,9 @@ de pourcentage. Cela ne résout pas les liens de bâtiments inconnus.
 
 ## Valeurs suspectes
 
-Dans une copie de travail, les hauteurs sous plafond supérieures à 10 m et les
-nombres de niveaux supérieurs à 10 sont remplacés par une valeur manquante.
+L'option expérimentale `apply_mask=True` remplace, dans une copie de travail,
+les hauteurs sous plafond supérieures à 10 m et les nombres de niveaux supérieurs
+à 10 par une valeur manquante. Elle n'est pas activée dans le notebook actuel.
 Les valeurs non positives/non finies de surface, hauteur ou nombre de niveaux,
 les nombres de niveaux non entiers et les indicateurs d'isolation hors {0, 1}
 sont traités de la même façon.
@@ -30,7 +35,9 @@ pourra être évaluée sur train/validation, jamais en choisissant la meilleure 
 sur le test. Les hauteurs très basses restent à examiner.
 On ne devine pas les unités (pas de division automatique par 100), on ne supprime
 aucune ligne et on conserve les grandes surfaces ainsi que les consommations élevées.
-Le journal `data/splits/masked_values.csv` conserve les identifiants et valeurs d'origine.
+Le journal historique `data/splits/masked_values.csv` conserve les identifiants et
+valeurs concernés par cette proposition. `load_shared_data(..., apply_mask=False)`
+conserve les valeurs brutes et renvoie un journal de changements vide.
 
 Les valeurs manquantes sont laissées telles quelles. L'imputation, l'encodage et
 la standardisation seront ajustés dans le Pipeline du modèle, sur les données
@@ -63,7 +70,8 @@ Le script de génération refuse d'écraser une séparation existante.
 Dans le Colab partagé, exécuter les cellules jusqu'à la section **5.1**.
 Cette section fournit :
 
-- `df_train`, `df_val`, `df_test` : tables après masquage et avec les groupes ;
+- `df_train_raw` : train avant traitement, chargé en section 4.3 ;
+- `df_train`, `df_val`, `df_test` : tables avec les groupes, sans masquage par défaut ;
 - `X_train`, `X_val`, `X_test` : les 17 entrées uniquement ;
 - `y_train_reg`, `y_val_reg`, `y_test_reg` : cibles de régression ;
 - `y_train_clf`, `y_val_clf`, `y_test_clf` : cibles de classification ;

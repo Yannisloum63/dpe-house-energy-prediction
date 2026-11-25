@@ -1,0 +1,8 @@
+{
+  "scope": "train_raw_only",
+  "rows": 47974,
+  "values_changed": 0,
+  "source_sha256": "2ad294f1e64669e1d92e8a6238b1bed6dbcd8acfc62616b72e0542b5795604de",
+  "assignments_sha256": "40fa6f625ff9351348211dfc89bcb49a32fa919b402fc095475e9f623cdf1b97",
+  "note": "Analyse ajoutée après une proposition initiale de seuils ; elle ne constitue pas une validation a posteriori de ces seuils."
+}

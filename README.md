@@ -33,6 +33,8 @@ Energy Performance Diagnostics (DPE). The problem is treated in two ways:
 
 Les règles de traitement des valeurs suspectes et l'utilisation des ensembles fixes
 sont décrites dans [la préparation commune](docs/data_preparation.md).
+L'[analyse visuelle du train brut](docs/outlier_review.md) précède le choix des règles ;
+le masquage provisoire au seuil de 10 est désactivé par défaut.
 Réutiliser `data/splits/assignments.csv.gz` : environ 60 % train, 20 % validation,
 20 % test, sans chevauchement des groupes de bâtiments connus. La source reste inchangée.
 

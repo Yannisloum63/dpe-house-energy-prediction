@@ -1,0 +1,4 @@
+field,n,minimum,q01,q1,median,q3,q99,maximum,iqr,iqr_lower,iqr_upper,outside_iqr_count,iqr_warning
+hauteur_sous_plafond,47974,1.2,2.2,2.5,2.5,2.5,3.1,282.0,0.0,2.5,2.5,17405,"IQR nul : règle dégénérée, pas de nettoyage automatique"
+nombre_niveau_logement,47974,1.0,1.0,1.0,2.0,2.0,4.0,115.0,1.0,-0.5,3.5,502,"Repérage statistique uniquement, pas une preuve d'erreur"
+surface_habitable_logement,47974,7.0,36.0,83.7,104.2,137.4,322.0269999999997,3771.0,53.7,3.1499999999999915,217.95000000000002,2319,"Repérage statistique uniquement, pas une preuve d'erreur"

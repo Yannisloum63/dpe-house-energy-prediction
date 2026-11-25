@@ -128,8 +128,8 @@ def validate_assignments(data, assignments):
             raise ValueError(f"Classe manquante dans {name}.")
 
 
-def load_shared_data(base_url):
-    """Lire la source et la séparation publiées ; aucun nouvel apprentissage."""
+def load_shared_data(base_url, apply_mask=False):
+    """Réutiliser la séparation ; le masquage provisoire exige un choix explicite."""
     import requests
     def fetch(relative):
         response = requests.get(base_url.rstrip("/") + "/" + relative, timeout=120)
@@ -151,7 +151,12 @@ def load_shared_data(base_url):
     if len(raw) != 80000 or features != report["features"]:
         raise ValueError("Dimensions ou variables incompatibles.")
     validate_assignments(raw, assignments)
-    prepared, changes = prepare_inputs(raw, features)
+    if apply_mask:
+        prepared, changes = prepare_inputs(raw, features)
+    else:
+        prepared = raw.copy()
+        changes = pd.DataFrame(columns=["numero_dpe", "field", "original_value", "action"])
+    report = dict(report, masking_applied=bool(apply_mask), active_masked_cells=len(changes))
     prepared = prepared.merge(assignments, on="numero_dpe", how="left", validate="one_to_one")
     splits = {name: prepared.loc[prepared.split.eq(name)].copy()
               for name in ["train", "validation", "test"]}

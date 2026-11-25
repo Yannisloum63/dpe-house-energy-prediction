@@ -2,6 +2,7 @@
 import sys
 import unittest
 from pathlib import Path
+from unittest.mock import patch, MagicMock
 
 import numpy as np
 import pandas as pd
@@ -88,6 +89,23 @@ class PreparationTests(unittest.TestCase):
         features[0] = prep.TARGET_REG
         with self.assertRaisesRegex(ValueError, "Cible"):
             prep.prepare_inputs(sample(), features)
+
+    def test_published_loader_requires_explicit_masking(self):
+        root = Path(__file__).resolve().parents[1]
+        def response(url, **kwargs):
+            result = MagicMock()
+            result.content = (root / url.removeprefix("https://example.test/")).read_bytes()
+            return result
+        with patch("requests.get", side_effect=response):
+            raw, splits, features, changes, report = prep.load_shared_data("https://example.test")
+            self.assertTrue(changes.empty)
+            self.assertFalse(report["masking_applied"])
+            joined = pd.concat(splits.values()).set_index("numero_dpe").sort_index()
+            pd.testing.assert_frame_equal(joined[features], raw.set_index("numero_dpe").sort_index()[features])
+            _, masked_splits, _, changes, report = prep.load_shared_data("https://example.test", apply_mask=True)
+            self.assertEqual(len(changes), 24)
+            self.assertTrue(report["masking_applied"])
+            self.assertEqual(sum(len(d) for d in masked_splits.values()), 80000)
 
 
 if __name__ == "__main__":

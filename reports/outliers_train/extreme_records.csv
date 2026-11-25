@@ -1,0 +1,40 @@
+field_examined,selection,numero_dpe,periode_construction,hauteur_sous_plafond,nombre_niveau_logement,surface_habitable_logement,version_dpe
+hauteur_sous_plafond,largest_8,2501E1674693M,avant 1948,282.0,2.0,174.4,2.4
+hauteur_sous_plafond,largest_8,2171E0805451Q,avant 1948,256.0,2.0,185.9,1.1
+hauteur_sous_plafond,largest_8,2138E0566399B,2006-2012,246.0,1.0,102.9,1.0
+hauteur_sous_plafond,largest_8,2501E2504206V,1948-1974,26.0,1.0,183.0,2.4
+hauteur_sous_plafond,largest_8,2301E3942044F,2013-2021,25.5,2.0,82.5,2.3
+hauteur_sous_plafond,largest_8,2642E0870902B,avant 1948,25.0,3.0,86.0,2.6
+hauteur_sous_plafond,largest_8,2301E2322164D,avant 1948,9.6,1.0,151.9,2.2
+hauteur_sous_plafond,largest_8,2369E0893027Y,avant 1948,9.6,1.0,453.6,2.2
+hauteur_sous_plafond,smallest_5,2363E2599926R,avant 1948,1.2,3.0,235.0,2.3
+hauteur_sous_plafond,smallest_5,2438E1436559W,1978-1982,1.6,1.0,50.5,2.3
+hauteur_sous_plafond,smallest_5,2601E2236933D,1983-1988,1.6,3.0,200.6,2.6
+hauteur_sous_plafond,smallest_5,2338E2761383P,avant 1948,1.7,2.0,92.7,2.3
+hauteur_sous_plafond,smallest_5,2538E2629201T,1983-1988,1.7,2.0,43.0,2.4
+nombre_niveau_logement,largest_8,2601E2721538U,avant 1948,4.0,115.0,210.0,2.6
+nombre_niveau_logement,largest_8,2607E1105880I,1948-1974,2.5,37.0,138.7,2.6
+nombre_niveau_logement,largest_8,2238E0570521Q,2001-2005,2.6,30.0,200.0,2.0
+nombre_niveau_logement,largest_8,2503E2856854H,avant 1948,2.5,15.0,117.9,2.5
+nombre_niveau_logement,largest_8,2626E1163887C,avant 1948,2.5,11.0,110.0,2.6
+nombre_niveau_logement,largest_8,2373E1579809U,1948-1974,2.5,10.0,52.2,2.2
+nombre_niveau_logement,largest_8,2563E1547822F,1948-1974,2.5,10.0,129.0,2.4
+nombre_niveau_logement,largest_8,2469E2086416O,avant 1948,3.7,7.0,1316.8,2.3
+nombre_niveau_logement,smallest_5,2100E0481523D,1948-1974,2.6,1.0,82.2,1.0
+nombre_niveau_logement,smallest_5,2100E0780711J,avant 1948,2.5,1.0,43.0,1.1
+nombre_niveau_logement,smallest_5,2100E0934768Q,avant 1948,2.5,1.0,115.0,1.1
+nombre_niveau_logement,smallest_5,2101E0033885I,1948-1974,2.5,1.0,74.0,1.0
+nombre_niveau_logement,smallest_5,2101E0040617G,1989-2000,2.5,1.0,80.9,1.0
+surface_habitable_logement,largest_8,2474E1371781U,2013-2021,2.5,3.0,3771.0,2.3
+surface_habitable_logement,largest_8,2174E0992873H,1948-1974,2.5,1.0,2272.0,2.0
+surface_habitable_logement,largest_8,2469E2086416O,avant 1948,3.7,7.0,1316.8,2.3
+surface_habitable_logement,largest_8,2526E1870851Z,avant 1948,3.0,1.0,1174.5,2.4
+surface_habitable_logement,largest_8,2242E2938505C,avant 1948,3.0,1.0,1050.9,2.2
+surface_habitable_logement,largest_8,2473E3337999N,2013-2021,2.5,4.0,1033.0,2.4
+surface_habitable_logement,largest_8,2543E3519337Y,1948-1974,2.5,3.0,1014.8,2.5
+surface_habitable_logement,largest_8,2343E2819843G,avant 1948,3.0,4.0,994.3,2.3
+surface_habitable_logement,smallest_5,2569E1741556T,avant 1948,2.5,1.0,7.0,2.4
+surface_habitable_logement,smallest_5,2115E0150591O,avant 1948,2.2,3.0,11.4,1.0
+surface_habitable_logement,smallest_5,2526E0924529Z,après 2021,2.2,1.0,11.7,2.4
+surface_habitable_logement,smallest_5,2273E1287819J,1948-1974,2.5,1.0,11.9,2.1
+surface_habitable_logement,smallest_5,2163E0643099A,1948-1974,2.5,1.0,12.9,1.1
