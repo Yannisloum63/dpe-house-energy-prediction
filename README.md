@@ -27,7 +27,14 @@ Energy Performance Diagnostics (DPE). The problem is treated in two ways:
 
 | File | Content | Extraction date |
 | --- | --- | --- |
-| `data/dpe_houses.csv.gz` | DPE sample (to be generated, see below) | to fill in |
+| `data/dpe_houses.csv.gz` | 80,000 house diagnostics, region 84 | 2026-11-17 |
+
+### Préparation commune et séparation des données
+
+Les règles de traitement des valeurs suspectes et l'utilisation des ensembles fixes
+sont décrites dans [la préparation commune](docs/data_preparation.md).
+Réutiliser `data/splits/assignments.csv.gz` : environ 60 % train, 20 % validation,
+20 % test, sans chevauchement des groupes de bâtiments connus. La source reste inchangée.
 
 To regenerate the sample:
 

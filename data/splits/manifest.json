@@ -1,0 +1,110 @@
+{
+  "policy": {
+    "version": "preparation_v1",
+    "height_max_m": 10,
+    "levels_max": 10,
+    "reason": "Seuils prudents de projet pour les maisons, pas des seuils réglementaires. Valeurs non positives, non finies ou au-delà des bornes mises à NaN. Les nombres de niveaux non entiers sont également masqués.",
+    "unchanged": "Aucune ligne supprimée ; aucune correction supposée d'unité ; pas de plafond sur la surface ou les cibles ; pas d'imputation ni de normalisation."
+  },
+  "source_sha256": "2ad294f1e64669e1d92e8a6238b1bed6dbcd8acfc62616b72e0542b5795604de",
+  "seed": 42,
+  "algorithm": "StratifiedGroupKFold(5), fold 0=test, fold 1=validation, remaining=train",
+  "sklearn_version_at_generation": "1.4.2",
+  "features": [
+    "surface_habitable_logement",
+    "periode_construction",
+    "hauteur_sous_plafond",
+    "nombre_niveau_logement",
+    "zone_climatique",
+    "classe_altitude",
+    "classe_inertie_batiment",
+    "qualite_isolation_enveloppe",
+    "qualite_isolation_murs",
+    "qualite_isolation_plancher_bas",
+    "qualite_isolation_menuiseries",
+    "isolation_toiture",
+    "type_energie_principale_chauffage",
+    "type_emetteur_installation_chauffage_n1",
+    "type_energie_principale_ecs",
+    "type_ventilation",
+    "type_installation_chauffage_n1"
+  ],
+  "numeric_features": [
+    "surface_habitable_logement",
+    "hauteur_sous_plafond",
+    "nombre_niveau_logement"
+  ],
+  "categorical_features": [
+    "periode_construction",
+    "zone_climatique",
+    "classe_altitude",
+    "classe_inertie_batiment",
+    "qualite_isolation_enveloppe",
+    "qualite_isolation_murs",
+    "qualite_isolation_plancher_bas",
+    "qualite_isolation_menuiseries",
+    "isolation_toiture",
+    "type_energie_principale_chauffage",
+    "type_emetteur_installation_chauffage_n1",
+    "type_energie_principale_ecs",
+    "type_ventilation",
+    "type_installation_chauffage_n1"
+  ],
+  "rows": 80000,
+  "rows_removed": 0,
+  "masked_cells": 24,
+  "affected_rows": 24,
+  "masked_by_field": {
+    "hauteur_sous_plafond": 13,
+    "nombre_niveau_logement": 11
+  },
+  "split_sizes": {
+    "train": 47974,
+    "test": 16019,
+    "validation": 16007
+  },
+  "unique_groups": 78144,
+  "cross_split_groups": 0,
+  "rnb_missing": 40698,
+  "class_counts": {
+    "train": {
+      "A": 1560,
+      "B": 2468,
+      "C": 10423,
+      "D": 13745,
+      "E": 9297,
+      "F": 5379,
+      "G": 5102
+    },
+    "validation": {
+      "A": 520,
+      "B": 792,
+      "C": 3495,
+      "D": 4540,
+      "E": 3183,
+      "F": 1802,
+      "G": 1675
+    },
+    "test": {
+      "A": 494,
+      "B": 811,
+      "C": 3518,
+      "D": 4599,
+      "E": 3122,
+      "F": 1781,
+      "G": 1694
+    }
+  },
+  "assignments_sha256": "40fa6f625ff9351348211dfc89bcb49a32fa919b402fc095475e9f623cdf1b97",
+  "script_sha256": "fc5da6179798ab70688a40b1f38cdabea2509df017756916ed8a4ea198cc9628",
+  "limits": [
+    "Les RNB manquants ne permettent pas de garantir l'absence de tout bâtiment commun.",
+    "Les références de remplacement sont aussi regroupées ; les liens inconnus restent invisibles.",
+    "DPE de versions et années différentes conservés : les cibles ne sont pas harmonisées.",
+    "L'exploration descriptive initiale portait sur les 80000 lignes avant la séparation.",
+    "Le test est désormais réservé ; toute nouvelle analyse guidant le modèle utilise train.",
+    "Les seuils de masquage sont une convention de projet à discuter et tester sur train/validation.",
+    "Imputation, encodage, standardisation et sélection doivent être ajustés dans les plis d'entraînement.",
+    "Réutiliser les groupes lors de la validation croisée ; ne jamais inclure group_id ou split dans X."
+  ]
+}
