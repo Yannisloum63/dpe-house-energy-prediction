@@ -38,8 +38,8 @@ est de 0,383 point de pourcentage. Les affectations sont associées par `numero_
 
 **Limites :** 40 698 diagnostics sans RNB peuvent cacher des répétitions de bâtiment.
 Les cibles de plusieurs versions du DPE sont conservées sans harmonisation.
-Les statistiques générales des sections 4.1, 4.2 et 4.4 portent sur les 80 000 lignes ;
-les analyses guidant les modèles doivent utiliser train/validation.
+Les métadonnées et taux de valeurs manquantes (4.1–4.2) portent sur les 80 000 lignes.
+Les graphiques et comparaisons des sections 4.3–4.5 utilisent le train uniquement.
 
 ## Valeurs suspectes et options de chargement
 
